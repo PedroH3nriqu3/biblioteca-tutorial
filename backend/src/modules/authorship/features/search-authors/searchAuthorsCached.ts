@@ -18,3 +18,4 @@ export async function searchAuthorsCached(term: string, integration: AuthorshipI
   await writeCachedSearch(term, cached.generation, authors, client);
   return { authors, cache: "MISS" };
 }
+

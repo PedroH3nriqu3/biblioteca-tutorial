@@ -36,3 +36,5 @@ const PREFIX = process.env.REDIS_PREFIX ?? "biblioteca";
 export function redisKey(...parts: string[]): string {
   return [PREFIX, ...parts].join(":");
 }
+
+//O cliente compartilhado, o ready() antes de qualquer comando e o redisKey(), que monta toda chave com o prefixo do ambiente e o módulo dono. Você usa este arquivo; não precisa mudá-lo
